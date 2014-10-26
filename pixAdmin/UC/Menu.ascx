@@ -13,6 +13,7 @@
                 <asp:MenuItem NavigateUrl="~/PagesByGEO.aspx" Text="PagesByGeo" Value="PagesByGeo"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/ProviderRevenu.aspx" Text="ProviderRevenu" Value="ProviderRevenu"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/pageRedirection.aspx" Text="pageRedirection" Value="pageRedirection"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/pageRedirectionByGEO.aspx" Text="pageRedirectionByGEO" Value="pageRedirectionByGEO"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/X-ByPageAndGeo.aspx" Text="X-ByPageAndGeo" Value="X-ByPageAndGeo"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/testSystem.aspx" Text="System Status" Value="System Status"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/logic.aspx" Text="Logic" Value="logic"></asp:MenuItem>

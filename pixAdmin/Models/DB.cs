@@ -210,6 +210,19 @@ namespace pixAdmin.DBStats
 
     }
 
+    [PetaPoco.TableName("LandingPagesMaskByGEO")]
+    [PetaPoco.PrimaryKey("id", autoIncrement = true)]
+    public class pixPageRedirectionByGEO
+    {
+        public int id { get; set; }
+        public int providerid { get; set; }
+        public int pageid_origin { get; set; }
+        public string countryCode { get; set; }
+        public int pageid_redirectTo { get; set; }
+
+
+    }
+
     [PetaPoco.TableName("LandingPages_X_Mask")]
     [PetaPoco.PrimaryKey("id")]
     public class pixLandingPages_X_Mask

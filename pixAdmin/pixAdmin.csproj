@@ -79,9 +79,11 @@
     </Content>
     <Content Include="packages.config" />
     <Content Include="pageRedirection.aspx" />
+    <Content Include="pageRedirectionByGEO.aspx" />
     <Content Include="PagesByGEO.aspx" />
     <Content Include="providerPagesLinks.aspx" />
     <Content Include="ProviderRevenu.aspx" />
+    <Content Include="redirectByGEO.aspx" />
     <Content Include="testSystem.aspx" />
     <Content Include="trafficSource.aspx" />
     <Content Include="UC\ucdate.ascx" />
@@ -174,6 +176,13 @@
     <Compile Include="pageRedirection.aspx.designer.cs">
       <DependentUpon>pageRedirection.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pageRedirectionByGEO.aspx.cs">
+      <DependentUpon>pageRedirectionByGEO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pageRedirectionByGEO.aspx.designer.cs">
+      <DependentUpon>pageRedirectionByGEO.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PagesByGEO.aspx.cs">
       <DependentUpon>PagesByGEO.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,6 +204,13 @@
     </Compile>
     <Compile Include="ProviderRevenu.aspx.designer.cs">
       <DependentUpon>ProviderRevenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="redirectByGEO.aspx.cs">
+      <DependentUpon>redirectByGEO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="redirectByGEO.aspx.designer.cs">
+      <DependentUpon>redirectByGEO.aspx</DependentUpon>
     </Compile>
     <Compile Include="Stats.aspx.cs">
       <DependentUpon>Stats.aspx</DependentUpon>
