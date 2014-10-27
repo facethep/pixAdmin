@@ -9,7 +9,14 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 168px;
+            width: 126px;
+        }
+        .auto-style2 {
+            width: 126px;
+            height: 27px;
+        }
+        .auto-style3 {
+            height: 27px;
         }
     </style>
 </head>
@@ -22,8 +29,8 @@
 
     <h2>Page Redirection by GEO</h2>
 
-        <div><b>explanation: </b>if providerid = -1 it means that all <b>origin </b>pages will be redirected to <b>redirectTo</b> pages </div>
-        <div><b>otherwise: </b>for only for the specific provider id there will be redirection</div>
+        <div><b>explanation: </b>if providerid = -1 it means that all <b>origin </b>pages will be redirected to <b>redirectTo</b> pages according to <strong>GEO</strong> </div>
+        <div><b>otherwise: </b>Only for the specific provider id there will be redirected according to <strong>GEO</strong></div>
         <br />
         <asp:GridView ID="grdPageRedirect" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
               AutoGenerateColumns="False" 
@@ -76,25 +83,25 @@
         <tr>
             <td class="auto-style1">Provider id</td>
             <td>
-                <asp:TextBox ID="txtProviderID" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtProviderID" runat="server" Width="35px"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">origin page id</td>
-            <td>
-                <asp:TextBox ID="txtpageOrigin" runat="server"></asp:TextBox>
+            <td class="auto-style2">origin page id</td>
+            <td class="auto-style3">
+                <asp:TextBox ID="txtpageOrigin" runat="server" Width="35px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style1">destination page id </td>
             <td>
-                <asp:TextBox ID="txtPageDestination" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPageDestination" runat="server" Width="35px"></asp:TextBox>
             </td>
         </tr>
          <tr>
             <td class="auto-style1">Country Code </td>
             <td>
-                <asp:TextBox ID="txtCountryCode" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtCountryCode" runat="server" Width="35px"></asp:TextBox>
             </td>
         </tr>
         <tr>
