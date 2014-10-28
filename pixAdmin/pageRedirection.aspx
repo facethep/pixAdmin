@@ -20,11 +20,15 @@
         <uc1:Menu ID="Menu1" runat="server" />
     
 
-    <h2>Page Redirection</h2>
+   
 
         <div><b>explanation: </b>if providerid = -1 it means that all <b>origin </b>pages will be redirected to <b>redirectTo</b> pages </div>
         <div><b>otherwise: </b>for only for the specific provider id there will be redirection</div>
         <br />
+
+        <table>
+<tr> <td valign="top">
+     <h2>Page Redirection</h2>
         <asp:GridView ID="grdPageRedirect" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
               AutoGenerateColumns="False" 
             OnSelectedIndexChanged="grdPageRedirect_SelectedIndexChanged" 
@@ -67,11 +71,18 @@
             <SortedDescendingCellStyle BackColor="#FCF6C0" />
             <SortedDescendingHeaderStyle BackColor="#820000" />
         </asp:GridView>
+
+        </td>
+        
+        <td valign="top"> <iframe src="pageRedirectionByGEO.aspx" width="600px" height="600px" frameborder="0"></iframe></td>
+        </tr>
+            
+        </table>
         <br />
         <div><h2>Add redirection</h2></div>
         <br />
 
-    <table style="width:100%;">
+    <table >
         <tr>
             <td class="auto-style1">Provider id</td>
             <td>

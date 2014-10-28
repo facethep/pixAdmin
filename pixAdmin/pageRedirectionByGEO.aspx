@@ -24,14 +24,11 @@
     <form id="form1" runat="server">
 
     
-        <uc1:Menu ID="Menu1" runat="server" />
+      
     
 
     <h2>Page Redirection by GEO</h2>
 
-        <div><b>explanation: </b>if providerid = -1 it means that all <b>origin </b>pages will be redirected to <b>redirectTo</b> pages according to <strong>GEO</strong> </div>
-        <div><b>otherwise: </b>Only for the specific provider id there will be redirected according to <strong>GEO</strong></div>
-        <br />
         <asp:GridView ID="grdPageRedirect" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
               AutoGenerateColumns="False" 
             OnSelectedIndexChanged="grdPageRedirect_SelectedIndexChanged" 
@@ -76,37 +73,35 @@
             <SortedDescendingHeaderStyle BackColor="#820000" />
         </asp:GridView>
         <br />
-        <div><h2>Add redirection</h2></div>
+        <div><h2>Add redirection by GEO</h2></div>
         <br />
 
-    <table style="width:100%;">
+    <table style="width:400px" >
         <tr>
             <td class="auto-style1">Provider id</td>
-            <td>
-                <asp:TextBox ID="txtProviderID" runat="server" Width="35px"></asp:TextBox>
-            </td>
+            <td class="auto-style2">Origin page id</td>
+            <td class="auto-style1">Destination page id </td>
+             <td class="auto-style1">Country Code </td>
         </tr>
         <tr>
-            <td class="auto-style2">origin page id</td>
+            
+            <td>
+                <asp:TextBox ID="txtProviderID" runat="server" Width="55px"></asp:TextBox>
+            </td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtpageOrigin" runat="server" Width="35px"></asp:TextBox>
+                <asp:TextBox ID="txtpageOrigin" runat="server" Width="55px"></asp:TextBox>
+            </td>
+             <td>
+                <asp:TextBox ID="txtPageDestination" runat="server" Width="55px"></asp:TextBox>
+            </td>
+            <td>
+                <asp:TextBox ID="txtCountryCode" runat="server" Width="55px"></asp:TextBox>
             </td>
         </tr>
+       
         <tr>
-            <td class="auto-style1">destination page id </td>
-            <td>
-                <asp:TextBox ID="txtPageDestination" runat="server" Width="35px"></asp:TextBox>
-            </td>
-        </tr>
-         <tr>
-            <td class="auto-style1">Country Code </td>
-            <td>
-                <asp:TextBox ID="txtCountryCode" runat="server" Width="35px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td>
+            
+            <td colspan="4" align="right">
                 <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" style="height: 26px" Text="Add" />
             </td>
         </tr>
