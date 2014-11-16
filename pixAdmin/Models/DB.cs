@@ -30,6 +30,15 @@ namespace pixAdmin.DBStats
 
     }
 
+    public class pageInstalls
+    {
+        public string Name { get; set; }
+        public string countryCode { get; set; }
+        public int sum { get; set; }
+        public int sentToProvider { get; set; }
+
+    }
+
     public class sumByTier
     {
         public DateTime date { get; set; }

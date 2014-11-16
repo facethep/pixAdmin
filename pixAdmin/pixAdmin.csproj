@@ -69,6 +69,7 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="logic.aspx" />
+    <Content Include="lpRename.aspx" />
     <Content Include="managePages.aspx" />
     <Content Include="manageProviders.aspx" />
     <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
@@ -88,8 +89,11 @@
     <Content Include="trafficSource.aspx" />
     <Content Include="UC\ucdate.ascx" />
     <Content Include="UC\ucProviders.ascx" />
+    <Content Include="vlc-21.jpg" />
+    <Content Include="vlc-63.jpg" />
     <Content Include="WebForm1.aspx" />
     <Content Include="X-ByPageAndGeo.aspx" />
+    <Content Include="_test.aspx" />
     <None Include="Properties\PublishProfiles\pixAdmin.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -137,6 +141,13 @@
     </Compile>
     <Compile Include="logic.aspx.designer.cs">
       <DependentUpon>logic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lpRename.aspx.cs">
+      <DependentUpon>lpRename.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lpRename.aspx.designer.cs">
+      <DependentUpon>lpRename.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>

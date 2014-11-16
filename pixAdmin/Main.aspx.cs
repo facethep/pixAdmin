@@ -20,13 +20,14 @@ namespace pixAdmin
     public partial class Main : System.Web.UI.Page
     {
 
-        public string strProvider;
+        public string strProvider, strPage;
         int total = 0;
            
         
         protected void Page_Load(object sender, EventArgs e)
         {
              strProvider = drpProviders.SelectedValue;
+             strPage = drpPage.SelectedValue;
 
              if (!Page.IsPostBack)
              {
@@ -47,7 +48,19 @@ namespace pixAdmin
                  db.CloseSharedConnection();
                  
                 //  ListItem i = new ListItem("ALL -choose wisely","-1");
-                 // drpProviders.Items.Add(i);
+                 // drpProviders.Items.Add(i)
+
+                 pixLandingPages l = new pixLandingPages();
+                 l.name = "ALL -choose wisely";
+                 l.id = -1;
+                 sQuery = "SELECT id, cast( id as varchar) + ' - ' + name + ' - ' + pcmac  as name  FROM landingpages order by name asc";
+                  var result2 = db.Fetch<pixLandingPages>(sQuery);
+                  result2.Add(l);
+                  result2.Reverse();
+                  drpPage.DataSource = result2;
+                  drpPage.DataBind();
+                  db.CloseSharedConnection();
+
 
              }
         }
@@ -187,6 +200,24 @@ namespace pixAdmin
             var result = db.Fetch<sumInstalls>(sQuery);
             GridView4.DataSource = result.ToList();
             GridView4.DataBind();
+            db.CloseSharedConnection();
+        }
+
+        protected void btnpageInstalls_Click(object sender, EventArgs e)
+        {
+            var db = new PetaPoco.Database("myConnectionString");
+
+            string sQuery = " select  cast( landingpages.id as varchar) + ' - ' + landingpages.name + ' - '+landingpages.pcmac as name,  countryCode, count(1)  as sum ,sum(CASE WHEN sentToProvider = 1 THEN 1 END)   as sentToProvider from landingpages,  Responses";
+            sQuery = sQuery + " where landingpages.id = Responses.pageid";
+            sQuery = sQuery + " and ((landingpages.id=" + strPage + ") or (-1 = " + strPage + "))";
+            sQuery = sQuery + " and  CAST(Responses.date_created  as date) <= CAST('" + txtToDate.Text + "'  as date) ";
+            sQuery = sQuery + " and  CAST(Responses.date_created  as date) >= CAST('" + txtFromDate.Text + "'  as date) ";
+            sQuery = sQuery + " group by cast( landingpages.id as varchar) + ' - ' + landingpages.name + ' - '+landingpages.pcmac, countryCode";
+            sQuery = sQuery + " order by 1,3 desc";
+
+            var result = db.Query<pageInstalls>(sQuery);
+            grdpageInstalls.DataSource = result;
+            grdpageInstalls.DataBind();
             db.CloseSharedConnection();
         }
     }

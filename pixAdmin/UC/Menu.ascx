@@ -9,7 +9,9 @@
                 <asp:MenuItem NavigateUrl="~/Stats.aspx" Text="Statistics" Value="Statistics"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/details.aspx" Text="Details Per Provider" Value="Details Per Provider"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/manageProviders.aspx" Text="Providers" Value="Providers"></asp:MenuItem>
-                <asp:MenuItem NavigateUrl="~/managePages.aspx" Text="Pages" Value="Pages"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/managePages.aspx" Text="Pages" Value="Pages">
+                    <asp:MenuItem NavigateUrl="~/lpRename.aspx" Text="page link change" Value="page link change"></asp:MenuItem>
+                </asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/PagesByGEO.aspx" Text="PagesByGeo" Value="PagesByGeo"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/ProviderRevenu.aspx" Text="ProviderRevenu" Value="ProviderRevenu"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/pageRedirection.aspx" Text="pageRedirection" Value="pageRedirection"></asp:MenuItem>

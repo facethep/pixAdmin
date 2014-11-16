@@ -10,9 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        
-   
-        <uc1:Menu ID="Menu1" runat="server" />
+    <uc1:Menu ID="Menu1" runat="server" />
     
    <h2>The Logic page</h2>
     <table border="1">

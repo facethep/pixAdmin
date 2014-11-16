@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
 
     <script language="javascript">
+        
         $(function () {
             $("[id$=txtFromDate]").datepicker({ showOn: 'button'});
         });
@@ -51,7 +52,11 @@
 &nbsp;
          Provider: 
         <asp:DropDownList ID="drpProviders" runat="server" DataTextField="name" DataValueField="id" />
-           
+&nbsp;&nbsp; Page Name:          
+          
+     
+         <asp:DropDownList ID="drpPage" runat="server" DataTextField="name" DataValueField="id">
+        </asp:DropDownList>
           
      
          <br /> <br />
@@ -61,6 +66,7 @@
           &nbsp;&nbsp;
         <asp:Button ID="Button3" runat="server" OnClick="Button3_Click"  Text="Installs per GEO (byDay)" />
         <asp:Button ID="btnInstallByGEO_SUM" runat="server" OnClick="btnInstallByGEO_SUM_Click" style="height: 26px" Text=" Installs per GEO (sum)" />
+        <asp:Button ID="btnpageInstalls" runat="server" OnClick="btnpageInstalls_Click" Text="Show page installs" />
         <br />
         
     <br />
@@ -69,6 +75,7 @@
         <tr>
             <td><strong>Request to landing page</strong></td>
             <td><strong>Responses (Pixel notification)</strong></td>
+           <td>Installs per Page</td>
            <td><strong>Installs Per GEO</strong></td>
         </tr>
         <tr>
@@ -98,6 +105,10 @@
                     <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
                     <SortedDescendingCellStyle BackColor="#D8D8F0" />
                     <SortedDescendingHeaderStyle BackColor="#3E3277" />
+                </asp:GridView>
+            </td>
+            <td  valign="top">
+                <asp:GridView ID="grdpageInstalls" runat="server">
                 </asp:GridView>
             </td>
             <td  valign="top">
